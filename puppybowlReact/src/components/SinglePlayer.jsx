@@ -42,4 +42,6 @@ export default function Singleplayer() {
             )}
         </div>
     )
+
+    
 }
