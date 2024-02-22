@@ -6,7 +6,7 @@ export async function getAllPlayers() {
         // console.log(response)
         const result = await response.json()
         const resultplayers = result.data.players
-        console.log(resultplayers)
+        // console.log(resultplayers)
         return resultplayers
         
 

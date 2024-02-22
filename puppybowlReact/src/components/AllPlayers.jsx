@@ -17,21 +17,24 @@ export default function Allplayers(){
         players()
     },[])
     
-    console.log(players)
+    // console.log(players)
 
     return(
         <div>
-            <h2>All Player</h2>
+            <h2>All Players</h2>
 
             {players && players.map(player =>{
                 return <div key={player.id}>
+
                     <p>{player.name}</p>
+                    <Link to={`/singleplayer${player.id}`}> <button>Single Player</button> </Link>
+                    
+
                 </div>
             } )}
 
             
 
-            <Link to="/singleplayer"> <button>Single Player</button> </Link>
         </div>
     )
 }

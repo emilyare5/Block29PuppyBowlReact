@@ -18,7 +18,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Allplayers/>}/>
-        <Route path="/singleplayer" element={<Singleplayer/>}/>
+        <Route path="/singleplayer/:bookID" element={<Singleplayer/>}/>
         {/* <Route path="/newplayerform" element={<Newplayerform/>}/> */}
         
       </Routes>
