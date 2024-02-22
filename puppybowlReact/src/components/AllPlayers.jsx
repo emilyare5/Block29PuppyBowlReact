@@ -23,6 +23,8 @@ export default function Allplayers(){
         <div>
             <h2>All Players</h2>
 
+            <h2></h2>
+
             {players && players.map(player =>{
                 return <div key={player.id}>
 
