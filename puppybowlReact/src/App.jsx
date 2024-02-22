@@ -3,7 +3,8 @@ import Allplayers from './components/AllPlayers'
 import Newplayerform from './components/NewPlayerForm'
 import Singleplayer from './components/SinglePlayer'
 import { Link, Routes, Route } from 'react-router-dom'
-import SearchBar from './components/searchbar'
+import SearchBarCompoents from './components/searchbarC'
+
 
 function App() {
  
@@ -20,7 +21,7 @@ function App() {
         <Route path="/" element={<Allplayers/>}/>
         <Route path="/singleplayer/:bookID" element={<Singleplayer/>}/>
         {/* <Route path="/newplayerform" element={<Newplayerform/>}/> */}
-        <Route path="/searchbar" element={<SearchBar/>}/>
+        <Route path="/searchbar" element={<SearchBarCompoents/>}/>
         
       </Routes>
 
