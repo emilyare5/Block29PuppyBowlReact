@@ -12,6 +12,7 @@ function App() {
       <Allplayers/>
       <Newplayerform/>
       <Singleplayer/>
+      
 
 
 
