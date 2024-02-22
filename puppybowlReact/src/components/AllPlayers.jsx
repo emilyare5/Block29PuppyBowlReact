@@ -27,7 +27,7 @@ export default function Allplayers(){
                 return <div key={player.id}>
 
                     <p>{player.name}</p>
-                    <Link to={`/singleplayer${player.id}`}> <button>Single Player</button> </Link>
+                    <Link to={`/singleplayer/${player.id}`}> <button>Single Player</button> </Link>
                     
 
                 </div>
