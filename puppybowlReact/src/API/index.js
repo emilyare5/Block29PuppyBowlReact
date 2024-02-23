@@ -1,10 +1,11 @@
 
-
+// API to get all players 
 export async function getAllPlayers() {
     try {
         const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2311-FTB-ET-WEB-PT/players`)
         // console.log(response)
         const result = await response.json()
+        // console.log(result)
         const resultplayers = result.data.players
         // console.log(resultplayers)
         return resultplayers
@@ -16,6 +17,7 @@ export async function getAllPlayers() {
     }
 }
 
+// API to get single player data
 export async function getSinglePlayer(bookID){
 
         // console.log(bookID)
@@ -55,6 +57,7 @@ export async function fetchSearchData() {
     }
 }
 
+// API to craete new player
 export async function playerAPI(newPlayer) {
     try {
         const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2311-FTB-ET-WEB-PT/players`,
