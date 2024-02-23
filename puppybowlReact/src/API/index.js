@@ -79,6 +79,28 @@ export async function playerAPI(newPlayer) {
     }
 }
 
+// API to delete player
+export async function DeletePlayer(playerId){
+    try {
+        const deleteResponse = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2311-FTB-ET-WEB-PT/players/${playerId}`, {
+            method: 'DELETE',
+            headers: {"Content-Type":"application/json"},
+        });
+
+        const result = await deleteResponse.json()
+        // console.log(result)
+
+        return result
+        
+    } catch (err) {
+        console.error(
+            `Whoops, trouble removing player #${playerId} from the roster!`,
+            err
+        );
+    }
+
+}
+
 
 
 
