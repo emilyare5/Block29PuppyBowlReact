@@ -23,12 +23,13 @@ export default function Newplayerform({ setNewPlayer}) {
             image: image
         };
     
-        console.log(newPlayer)
+        // console.log(newPlayer)
 
-
-        // .................API.......(object we craeted)....from here i was able to post the new player,but i needed to refresh the page
+        // dosent need a use effect here bc the button is trigger this function
+        // .................API.......(object I craeted)....from here i was able to post the new player,but i needed to refresh the page
         const result = await playerAPI(newPlayer);
 
+        // to fix the refresh problem i had to create a useState with the (result)
         // we deconstructed the useState setter to set the API new player object
         setNewPlayer(result)
 
