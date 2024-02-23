@@ -14,7 +14,7 @@ function App() {
       
       <Link to="/"> <button>Home (See All Players)</button> </Link>
       <Link to="/searchbar"> <button>Search Player</button> </Link>
-      {/* <Link to="/newplayerform"> <button></button> </Link> */}
+      {/* <Link to="/newplayerform"> <button>Add Player</button> </Link> */}
       
       
       <Routes>

@@ -1,10 +1,12 @@
 import { Link} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { getAllPlayers } from '../API';
+import Newplayerform from './NewPlayerForm';
 
 export default function Allplayers(){
 
     const [players, setPlayers] = useState(null)
+    const[newplayer, setNewPlayer] = useState(null)
 
     useEffect(()=> {
 
@@ -15,15 +17,22 @@ export default function Allplayers(){
         }
 
         players()
-    },[])
+    },[newplayer])
     
     // console.log(players)
 
+    const handlePlayerAdded = (newPlayer) => {
+        setPlayers(prevPlayers => [...prevPlayers, newPlayer])
+    }
+
     return(
         <div>
+             
+
             <h2>All Players</h2>
 
-            <h2></h2>
+            <Newplayerform setNewPlayer={setNewPlayer}/>
+            {/* <Newplayerform handlePlayerAdded={handlePlayerAdded}/> */}
 
             {players && players.map(player =>{
                 return <div key={player.id}>
@@ -35,6 +44,7 @@ export default function Allplayers(){
 
                 </div>
             } )}
+
 
             
 
