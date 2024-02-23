@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { playerAPI } from '../API';
 
 export default function Newplayerform({ setNewPlayer}) {
 
+    // created a useSate to store all the value from the form
     const [name, setName] = useState("")
     const [breed, setBreed] = useState("")
     const [status, setStatus] = useState("")
@@ -10,48 +11,32 @@ export default function Newplayerform({ setNewPlayer}) {
 
 
 
-    const handleSubmit = async (event) => {
+    async function handleSubmit(event){
+
         event.preventDefault();
-
-
+    
+        // created an object with useState getters
         const newPlayer = {
             name: name,
             breed: breed,
             status: status,
             image: image
         };
-
+    
         console.log(newPlayer)
+
+
+        // .................API.......(object we craeted)....from here i was able to post the new player,but i needed to refresh the page
         const result = await playerAPI(newPlayer);
+
+        // we deconstructed the useState setter to set the API new player object
         setNewPlayer(result)
 
-    };
+    }
 
-    // useEffect(() => {
-       
+    
 
-    //         async function newPlayer() {
-    //         }
-
-    //         newPlayer()
-
-            // if (result) {
-            //     // Clear the form after successful submission
-            //     // setName("");
-            //     // setBreed("");
-            //     // setStatus("");
-            //     // setImage("");
-            //     alert('Player added successfully!');
-            // } else {
-            //     alert('Failed to add player');
-            // }
-        
-            
-
-        
-
-
-    // }, [name, breed, status, image])
+    
 
 
     return (
@@ -71,7 +56,7 @@ export default function Newplayerform({ setNewPlayer}) {
                 <label>Image:</label>
                 <input value={image} onChange={(event) => setImage(event.target.value)}></input>
                 <br></br>
-                <button type="submit">Submit</button>
+                <button>Submit</button>
             </form>
         </div>
     )

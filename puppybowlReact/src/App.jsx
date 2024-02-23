@@ -14,13 +14,18 @@ function App() {
       
       <Link to="/"> <button>Home (See All Players)</button> </Link>
       <Link to="/searchbar"> <button>Search Player</button> </Link>
-      {/* <Link to="/newplayerform"> <button>Add Player</button> </Link> */}
+      
       
       
       <Routes>
         <Route path="/" element={<Allplayers/>}/>
-        <Route path="/singleplayer/:bookID" element={<Singleplayer/>}/>
-        {/* <Route path="/newplayerform" element={<Newplayerform/>}/> */}
+
+        {/* this has to match the parmas(), we are setting it here..puppyID */}
+        {/* we are creating the link in AllPlayers.jsx bc that is where the button is created */}
+        {/* the :puppyID here definds the id from the link in AllPlayers.jsx */}
+        <Route path="/singleplayer/:puppyID" element={<Singleplayer/>}/>
+
+        
         <Route path="/searchbar" element={<SearchBarCompoents/>}/>
         
       </Routes>
