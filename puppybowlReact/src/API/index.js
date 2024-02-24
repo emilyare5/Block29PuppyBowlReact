@@ -41,7 +41,7 @@ export async function getSinglePlayer(bookID){
 
 }
 
-export async function fetchSearchData() {
+export async function searchData() {
     try {
         const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2311-FTB-ET-WEB-PT/players`)
         // console.log(response)

@@ -2,6 +2,7 @@ import { Link} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { DeletePlayer, getAllPlayers } from '../API';
 import Newplayerform from './NewPlayerForm';
+import Searchbar from './searchbar';
 
 export default function Allplayers(){
     // this use states is save all players from API 
@@ -52,11 +53,16 @@ export default function Allplayers(){
         <div>
              
 
-            <h2>All Players</h2>
 
             {/* deconstructed the setter into the Newplayerform */}
-            <Newplayerform setNewPlayer={setNewPlayer}/>
+            <Newplayerform setNewPlayer={setNewPlayer} />
             
+            <h2>All Players</h2>
+
+            <div>
+                <Searchbar />
+            </div>
+
 
             {players && players.map(player =>{
                 return <div key={player.id}>
