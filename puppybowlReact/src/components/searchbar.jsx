@@ -32,7 +32,11 @@ export default function Searchbar({}){
 
     function handleFilter(value){
         const res = filterData.filter(f => f.name.toLowerCase().includes(value))
+        
+
         setData(res)
+
+        // this if for when value is empty show no data
         if(value ===""){
             setData([])
         }

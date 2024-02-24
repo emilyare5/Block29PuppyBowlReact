@@ -43,6 +43,11 @@ export default function Allplayers(){
         
         // The api delete the players but we need to refresh the page
         const result =  await DeletePlayer(playerId)
+
+        if(result){
+            alert('Player removed successfully!'); 
+        }
+        
         // so we saved the removed player in the useStates
         setRemovePlayer(result)
     }
