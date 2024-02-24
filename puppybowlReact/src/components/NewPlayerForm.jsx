@@ -32,6 +32,7 @@ export default function Newplayerform({ setNewPlayer}) {
         // to fix the refresh problem i had to create a useState with the (result)
         // we deconstructed the useState setter to set the API new player object
         setNewPlayer(result)
+        
 
     }
 
