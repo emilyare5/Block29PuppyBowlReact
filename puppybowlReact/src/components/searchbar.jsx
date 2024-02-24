@@ -4,7 +4,7 @@ import { searchData } from '../API';
 export default function Searchbar({}){
 
     // this will be used to display the data
-    const [data, setData] = useState([])
+    const [dataa, setData] = useState([])
 
     // this will be used for filtering the data
     const [filterData, setFilterData] = useState([])
@@ -13,11 +13,14 @@ export default function Searchbar({}){
         
        async function searchPlayer(){
 
+        
+        
         const data = await searchData()
         // console.log(data)
 
         // by default we can see the data if we bring back the console.log
         // setData(data)
+        
         setFilterData(data)
         
         
@@ -27,12 +30,12 @@ export default function Searchbar({}){
        searchPlayer()
     
 
-    },[data])
+    },[dataa])
 
 
     function handleFilter(value){
         const res = filterData.filter(f => f.name.toLowerCase().includes(value))
-        
+
 
         setData(res)
 
@@ -54,7 +57,7 @@ export default function Searchbar({}){
             <div>
                 <div className='search-result'>
 
-                    {data.map((d, i)=> (
+                    {dataa.map((d, i)=> (
                         <div key ={i}>
                             {d.name}
                             <img src={d.imageUrl}/>
