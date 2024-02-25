@@ -31,7 +31,8 @@ export default function Singleplayer() {
     // console.log(singleData)
 
     return (
-        <div>
+        <div className='singleConatiner'>
+            <div>
             {singleData ? (
                 <div>
                     <h2>More Infomation!</h2>
@@ -47,6 +48,8 @@ export default function Singleplayer() {
             ) : (
                 <p>Loading...</p>
             )}
+
+            </div>
         </div>
     )
 

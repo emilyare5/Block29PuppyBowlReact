@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       
-      <Link to="/"> <button>Home (See All Players)</button> </Link>
+      <Link to="/" className='homebutton'> <button>Home (See All Players)</button> </Link>
       
       
       

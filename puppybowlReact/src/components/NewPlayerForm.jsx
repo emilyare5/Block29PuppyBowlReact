@@ -52,7 +52,7 @@ export default function Newplayerform({ setNewPlayer }) {
 
     return (
         <div>
-            <h2>New Player Form</h2>
+            <h2 className='formtext'>New Player Form</h2>
 
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>

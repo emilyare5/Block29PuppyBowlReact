@@ -34,8 +34,8 @@ export default function Searchbar({}){
 
 
     function handleFilter(value){
-        const res = filterData.filter(f => f.name.toLowerCase().includes(value))
-
+        // const res = filterData.filter(f => f.name.toLowerCase().includes(value))
+        const res = filterData.filter(f => f.name.includes(value))
 
         setData(res)
 
@@ -47,10 +47,12 @@ export default function Searchbar({}){
 
     return(
         <div>
-            <h2>Search Player</h2>
+            <h2 className='seachText'>Search Player</h2>
+            
+            
 
             <div className='search'>
-                <input type="text" placeholder='Search Here...' onChange={ e => handleFilter(e.target.value)}></input>
+                <input type="text" placeholder='Search' onChange={ e => handleFilter(e.target.value)}></input>
 
             </div>
 
