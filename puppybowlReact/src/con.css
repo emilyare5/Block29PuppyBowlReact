@@ -37,7 +37,8 @@ img{
 
 }
 .homebutton{
-    
     margin: 50px;
-    
+    display: flex;
+    justify-content: end;
+
 }
