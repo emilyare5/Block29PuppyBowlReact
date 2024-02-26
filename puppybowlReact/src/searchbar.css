@@ -1,6 +1,6 @@
 
 .search{
-    width: 30%;
+    width: 50%;
 
 }
 
@@ -11,7 +11,7 @@
 }
 
 .search-result{
-   width: 48%; 
+   width: 100%; 
    margin-top: 10px;
 }
 
@@ -19,4 +19,14 @@
     width: 100%;
     padding: 10px;
     background-color: grey;
+}
+
+.searchBar{
+    
+    padding: 10px;
+    margin: 50px; 
+}
+
+.seachText{
+    text-decoration: underline;
 }

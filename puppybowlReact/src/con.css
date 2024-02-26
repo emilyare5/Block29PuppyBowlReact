@@ -2,3 +2,43 @@ img{
     width: 300px;
     
 }
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form{
+    border: 5px solid rgb(255, 0, 85);
+    padding: 10px;
+    margin: 50px;
+}
+
+.formtext{
+    text-decoration: underline;
+}
+
+.playertext{
+    text-decoration: underline;
+}
+
+.playerContainer{
+  display: flex;  
+  flex-wrap: wrap;
+}
+
+.singleConatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+
+}
+.homebutton{
+    margin: 50px;
+    display: flex;
+    justify-content: end;
+
+}
