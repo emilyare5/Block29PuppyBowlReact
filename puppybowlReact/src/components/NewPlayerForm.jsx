@@ -6,7 +6,7 @@ export default function Newplayerform({ setNewPlayer }) {
     // created a useSate to store all the value from the form
     const [name, setName] = useState("")
     const [breed, setBreed] = useState("")
-    const [status, setStatus] = useState("")
+    const [status, setStatus] = useState("field")
     const [image, setImage] = useState("")
 
 
@@ -23,7 +23,7 @@ export default function Newplayerform({ setNewPlayer }) {
             image: image
         };
 
-        // console.log(newPlayer)
+        console.log(newPlayer)
 
         // dosent need a use effect here bc the button is trigger this function
         // .................API.......(object I craeted)....from here i was able to post the new player,but i needed to refresh the page
@@ -62,7 +62,11 @@ export default function Newplayerform({ setNewPlayer }) {
                 <input value={breed} onChange={(event) => setBreed(event.target.value)}></input>
                 <br></br>
                 <label>Status:</label>
-                <input placeholder='field or bench' value={status} onChange={(event) => setStatus(event.target.value)}></input>
+                <select value={status} onChange={(event) => setStatus(event.target.value)}>
+                    <option value="field" >field</option>
+                    <option value="bench">bench</option>
+                </select>
+                {/* <input placeholder='field or bench' value={status} onChange={(event) => setStatus(event.target.value)}></input> */}
                 <br></br>
                 <label>Image:</label>
                 <input value={image} onChange={(event) => setImage(event.target.value)}></input>
